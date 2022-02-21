@@ -21,11 +21,11 @@ by defining a rule with the use of the universal selector
 
 body {
   /* Props related to fonts are usually inherited, that's why we define font rules inside the body tag */
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
   color: #777;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
   padding: 30px;
 }
 
@@ -39,4 +39,41 @@ body {
   background-size: cover; /* Will always try to cover the size of the element  */
   background-position: top; /* Tells how the background will act on resize, in this case the top part wont be cropped */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* We define a polygon in which the image will still be visible */
+  position: relative;
+}
+
+.logo-box {
+  left: 40px;
+  position: absolute;
+  top: 40px; /* the starting point is the parent who has declared a relative positioning */
+}
+
+.logo {
+  height: 35px;
+}
+
+.heading-primary {
+  color: #FFF;
+  text-transform: uppercase ;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%; /* Relative to parent's dimensions*/
+  left: 50%; /* Relative to parent's dimensions*/
+  transform: translate(-50%, -50%); /* Relative to element's itself dimensions*/
+}
+
+.heading-primary-main {
+  display: block; /* Block elements occupy all the available width by default and left a line break after them */
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
 }
